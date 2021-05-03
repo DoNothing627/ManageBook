@@ -3,9 +3,11 @@
     "",
     "\\Components",
     "\\Controllers",
+    "\\Models",
     "\\Pages",
+    "\\Pages\\Shared",
     "\\Properties"
   ],
-  "SelectedNode": "\\Pages\\Admin.cshtml",
+  "SelectedNode": "\\Pages\\_ViewImports.cshtml",
   "PreviewInSolutionExplorer": false
 }

@@ -48,3 +48,4 @@ C:\Users\An\source\repos\ManageBook\ManageBook\bin\Debug\net5.0\NuGet.Frameworks
 C:\Users\An\source\repos\ManageBook\ManageBook\obj\Debug\net5.0\Razor\Pages\Admin.cshtml.g.cs
 C:\Users\An\source\repos\ManageBook\ManageBook\obj\Debug\net5.0\RazorDeclaration\Components\Admin.razor.g.cs
 C:\Users\An\source\repos\ManageBook\ManageBook\obj\Debug\net5.0\Razor\Components\Admin.razor.g.cs
+C:\Users\An\source\repos\ManageBook\ManageBook\obj\Debug\net5.0\Razor\Pages\Action.cshtml.g.cs

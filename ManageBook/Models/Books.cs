@@ -14,7 +14,11 @@ namespace ManageBook.Models
         public string Descripstion { get; set; }
         public int[] Rate { get; set; }
         public int NumberOfThisBook { get; set; }
+
+        public List<string[]> Detail{ get; set; }
+
         public override string ToString() => JsonSerializer.Serialize<Books>(this);
+
 
         public Books(string id, string name, string img, string descripstion, int[] rate, int numberOfThisBook)
         {

@@ -67,15 +67,39 @@ namespace ManageBook.Services
 
         public void AddNewBook(string BookId, string BookName, string BookImg, string BookDescription, int BookNumberOfThisBook)
         {
+            var book= GetBooks();
             var list = JsonConvert.DeserializeObject<List<Books>>(JsonFileName);
             list.Add(new Books(BookId, BookName, BookImg, BookDescription, null, BookNumberOfThisBook));
             var convertedJson = JsonConvert.SerializeObject(list, Newtonsoft.Json.Formatting.Indented);
+            using (var outputStream = File.OpenWrite(JsonFileName))
+            {
+                System.Text.Json.JsonSerializer.Serialize<IEnumerable<Books>>(
+                    new Utf8JsonWriter(outputStream, new JsonWriterOptions
+                    {
+                        SkipValidation = true,
+                        Indented = true
+                    }),
+                    book
+                );
+            }
         }
 
-        public void UpdateBook(string BookId, int type)
+        public void UpdateBook(string BookId, bool type, string name, string gmail, string phoneNumber)
         {
             var book = GetBooks();
-            book.First(x => x.Id == BookId).NumberOfThisBook += type;
+            Books SelectedBook= book.First(x => x.Id == BookId);
+            //SelectedBook.NumberOfThisBook += type;
+
+            string[] detail= new string[3];
+                detail[0]= name;
+                detail[1]= gmail;
+                detail[2]= phoneNumber;
+
+            if(type== true)
+                SelectedBook.Detail.Add(detail);
+
+            else
+                SelectedBook.Detail.Remove(detail);
 
             using (var outputStream = File.OpenWrite(JsonFileName))
             {

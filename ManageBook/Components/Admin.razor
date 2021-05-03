@@ -1,4 +1,24 @@
-﻿
-@code {
+﻿@using ManageBook.Models
+@using ManageBook.Services
+@using Microsoft.AspNetCore.Components.Web
+@inject JsonFileBookService BookService
 
+<html>
+    <div>
+        
+    </div>
+</html>
+
+
+@code {
+    Books SelectedBook;
+    string selectedBookId;
+
+    void SelectBook(string bookId)
+    {
+        selectedBookId = bookId;
+        SelectedBook = BookService.GetBooks().First(x => x.Id == bookId);
+    }
+
+    
 }

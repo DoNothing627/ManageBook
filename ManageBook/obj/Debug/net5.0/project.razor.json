@@ -45,39 +45,6 @@
         }
       },
       {
-        "HashCode": -513597526,
-        "Kind": "Components.Component",
-        "Name": "ManageBook.Components.BooksList",
-        "AssemblyName": "ManageBook",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BooksList"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ManageBook.Components.BooksList"
-        }
-      },
-      {
-        "HashCode": -928973163,
-        "Kind": "Components.Component",
-        "Name": "ManageBook.Components.BooksList",
-        "AssemblyName": "ManageBook",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ManageBook.Components.BooksList"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ManageBook.Components.BooksList",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -1325194481,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView",
@@ -15727,6 +15694,11 @@
     {
       "FilePath": "c:\\Users\\An\\source\\repos\\ManageBook\\ManageBook\\Pages\\_ViewStart.cshtml",
       "TargetPath": "Pages\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\An\\source\\repos\\ManageBook\\ManageBook\\Pages\\Action.cshtml",
+      "TargetPath": "Pages\\Action.cshtml",
       "FileKind": "mvc"
     }
   ],

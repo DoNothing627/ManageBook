@@ -1,0 +1,10 @@
+@page
+@using ManageBook.Components;
+@model ActionModel
+@{
+    ViewData["Title"] = "Action";
+}
+
+@(await Html.RenderComponentAsync<Admin>(RenderMode.ServerPrerendered))
+
+<script src="_framework/blazor.server.js"></script>

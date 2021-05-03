@@ -12,6 +12,27 @@ namespace ManageBook.Components
     using System.Linq;
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
+#nullable restore
+#line 1 "C:\Users\An\source\repos\ManageBook\ManageBook\Components\Admin.razor"
+using ManageBook.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\An\source\repos\ManageBook\ManageBook\Components\Admin.razor"
+using ManageBook.Services;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\An\source\repos\ManageBook\ManageBook\Components\Admin.razor"
+using Microsoft.AspNetCore.Components.Web;
+
+#line default
+#line hidden
+#nullable disable
     public partial class Admin : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -19,6 +40,24 @@ namespace ManageBook.Components
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 13 "C:\Users\An\source\repos\ManageBook\ManageBook\Components\Admin.razor"
+       
+    Books SelectedBook;
+    string selectedBookId;
+
+    void SelectBook(string bookId)
+    {
+        selectedBookId = bookId;
+        SelectedBook = BookService.GetBooks().First(x => x.Id == bookId);
+    }
+
+    
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private JsonFileBookService BookService { get; set; }
     }
 }
 #pragma warning restore 1591
